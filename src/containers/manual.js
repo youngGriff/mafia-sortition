@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {countOfPlayersWithRole, createPlayer, createRole, makeSortition} from "../utils";
 import {addPlayer, removePlayer} from "../store/acrions/players";
-import ManualPlayerContainer from "../components/ManualPlayerContainer";
-import ManualRoleContainer from "../components/ManualRoleController";
+import ManualPlayerContainer from "../components/players/ManualPlayerContainer";
+import ManualRoleContainer from "../components/roles/ManualRoleController";
 import {
     Button,
     Nav,

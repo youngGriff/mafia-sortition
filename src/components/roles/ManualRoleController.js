@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import RoleDialog from "./RoleDialog";
 import RoleList from "./RoleList";
 import {Button} from "reactstrap";
-import {countOfPlayersWithRole} from "../utils";
+import {countOfPlayersWithRole} from "../../utils";
 
 class ManualRoleContainer extends React.Component {
 
