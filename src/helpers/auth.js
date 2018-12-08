@@ -1,10 +1,13 @@
-export const signIn = (firebase, credentials) => {
+import firebase from "../firebase/firebaseConfig";
+
+export const signIn = (credentials) => {
     firebase.auth().signInWithEmailAndPassword(
         credentials.email,
         credentials.password)
 };
-export const register = (firebase, firestore, credentials) => {
-    firebase.auth().createUserWithEmailAndPassword(
+export const register = (credentials) => {
+    const firestore = firebase.firestore();
+    return firebase.auth().createUserWithEmailAndPassword(
         credentials.email,
         credentials.password)
         .then(resp => {
@@ -13,3 +16,6 @@ export const register = (firebase, firestore, credentials) => {
             })
         })
 };
+export const signOut = () => {
+    firebase.auth().signOut();
+}

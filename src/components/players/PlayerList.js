@@ -7,7 +7,7 @@ class PlayerList extends PureComponent {
     render() {
         const {players} = this.props;
         return (
-            <div className='d-flex flex-column '>
+            <div className='  '>
                 {players.map(player => {
                     return <PlayerItem removePlayer={this.props.removePlayer} player={player}/>
                 })}

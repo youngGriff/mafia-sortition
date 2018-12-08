@@ -6,12 +6,10 @@ import {firebaseReducer, getFirebase, reactReduxFirebase} from "react-redux-fire
 import thunk from 'redux-thunk';
 import {firestoreReducer, getFirestore, reduxFirestore} from 'redux-firestore'
 import fbConfig from '../firebase/firebaseConfig'
-import {loadingReducer} from "./reducers/loading";
 
 const rootReducer = combineReducers({
     players: playerReducer,
     roles: rolesReducer,
-    loading:loadingReducer,
     firestore: firestoreReducer,
     firebase: firebaseReducer
 });

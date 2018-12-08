@@ -9,8 +9,9 @@ export default class RoleDialog extends React.Component {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        const role = this.props.role || {count: 1, name: '', description: ''};
         this.state = {
-            amount: 1
+            ...role
         }
     }
 
@@ -22,32 +23,32 @@ export default class RoleDialog extends React.Component {
     render() {
         return (
             <Modal isOpen={this.props.open} toggle={this.props.toggle}>
-                <ModalHeader toggle={this.props.toggle}>Add a new Role</ModalHeader>
+                <ModalHeader toggle={this.props.toggle}> Role</ModalHeader>
                 <AvForm onValidSubmit={this.handleSubmit}>
                     <ModalBody>
                         <FormGroup>
-                            <Label for="name">Name</Label>
-                            <AvField innerRef={node => {
-                                this.name = node
-                            }}
-                                     required type="text" name="name" id="name" placeholder="Type  name here..."/>
+                            <Label for="nickname">Name</Label>
+                            <AvField
+                                value={this.state.name}
+                                onChange={this.handleChange}
+                                required type="text" name="name" id="name" placeholder="Type  name here..."/>
                         </FormGroup>
                         <FormGroup>
-                            <Label for="desc">Description</Label>
-                            <AvField innerRef={node => {
-                                this.desc = node
-                            }}
-                                     required type="text" name="desc" id="desc" placeholder="Type description here..."/>
+                            <Label for="description">Description</Label>
+                            <AvField value={this.state.description}
+                                     onChange={this.handleChange}
+                                     required type="text" name="description" id="description"
+                                     placeholder="Type description here..."/>
                         </FormGroup>
                         <InputGroup>
-                            <AvField placeholder="Amount" type="number" name='amount' min={1} value={this.state.amount}
+                            <AvField placeholder="Amount" type="number" name='count' min={1} value={this.state.count}
                                      onChange={this.handleChange}
                                      required
                                      step="1"/>
                         </InputGroup>
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="success">Add</Button>
+                        <Button color="success">Submit</Button>
                         <Button color="danger" onClick={this.props.toggle}>Cancel</Button>
                     </ModalFooter>
                 </AvForm>
@@ -57,7 +58,8 @@ export default class RoleDialog extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        this.props.handleAdd(this.name.value, this.desc.value, this.state.amount);
+        console.log({...this.state});
+        this.props.handleSubmit({...this.state});
         this.props.toggle();
     }
 

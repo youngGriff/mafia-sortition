@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {countOfPlayersWithRole, createPlayer, createRole, makeSortition} from "../utils";
+import {countOfPlayersWithRole, createPlayer, createRole, makeSortition} from "../helpers/utils";
 import {addPlayer, removePlayer} from "../store/acrions/players";
 import ManualPlayerContainer from "../components/players/ManualPlayerContainer";
 import ManualRoleContainer from "../components/roles/ManualRoleController";
@@ -14,7 +14,14 @@ import {
     NavbarBrand, Navbar, Container
 } from "reactstrap";
 import classnames from 'classnames';
-import {addRole, editRole, removeRole} from "../store/acrions/roles";
+import {
+    addRole,
+    editRole,
+    finishEditingRole,
+    hasEditedRole,
+    removeRole,
+    startEditingRole
+} from "../store/acrions/roles";
 import SortitionDialog from "../components/SortittionDialog";
 
 class Manual extends Component {
@@ -48,7 +55,7 @@ class Manual extends Component {
 
     checkSortitionEnabled() {
         const {players, roles} = this.props;
-        return players.length >= countOfPlayersWithRole(roles);
+        return players.length >= countOfPlayersWithRole(roles.roles);
     }
 
     makeSortition() {
@@ -57,7 +64,7 @@ class Manual extends Component {
 
         this.setState({
             showSortition: true,
-            sortitionList: makeSortition(players, roles)
+            sortitionList: makeSortition(players, roles.roles)
         });
     }
 
@@ -65,42 +72,36 @@ class Manual extends Component {
 
         return (
             <div>
-                <Navbar color='dark'>
-                    <Container>
-                        <NavbarBrand className='text-white'>Mafia</NavbarBrand>
-                        <Nav>
-                            <NavItem className='ml-auto '>
-                                <Button disabled={!this.checkSortitionEnabled()} onClick={this.makeSortition}
-                                        color='primary'>Make
-                                    Sortition</Button>
-                            </NavItem>
-                        </Nav>
-                    </Container>
-                </Navbar>
-                <Nav pills tabs>
-                    <Container>
-                        <NavItem className='d-inline-block'>
-                            <NavLink
-                                className={classnames({active: this.state.activeTab === '1'})}
-                                onClick={() => {
-                                    this.toggle('1');
-                                }}
-                            >
-                                Players
-                            </NavLink>
-                        </NavItem>
-                        <NavItem className='d-inline-block'>
-                            <NavLink
-                                className={classnames({active: this.state.activeTab === '2'})}
-                                onClick={() => {
-                                    this.toggle('2');
-                                }}
-                            >
-                                Roles
-                            </NavLink>
-                        </NavItem>
-                    </Container>
+
+                <Nav className='px-5' pills tabs>
+
+                    <NavItem className='d-inline-block'>
+                        <NavLink
+                            className={classnames({active: this.state.activeTab === '1'})}
+                            onClick={() => {
+                                this.toggle('1');
+                            }}
+                        >
+                            Players
+                        </NavLink>
+                    </NavItem>
+                    <NavItem className='d-inline-block'>
+                        <NavLink
+                            className={classnames({active: this.state.activeTab === '2'})}
+                            onClick={() => {
+                                this.toggle('2');
+                            }}
+                        >
+                            Roles
+                        </NavLink>
+                    </NavItem>
+                    <NavItem className='d-inline-block ml-auto'>
+                        <Button disabled={!this.checkSortitionEnabled()} onClick={this.makeSortition}
+                                color='primary'>Make
+                            Sortition</Button>
+                    </NavItem>
                 </Nav>
+
                 <SortitionDialog
                     open={this.state.showSortition}
                     sortitionList={this.state.sortitionList}
@@ -117,7 +118,11 @@ class Manual extends Component {
                             <ManualRoleContainer
                                 addRole={this.props.addRole}
                                 removeRole={this.props.removeRole}
-                                editRole={this.props.editRole}
+
+                                startEditingRole={this.props.startEditingRole}
+                                hasEditedRole={this.props.hasEditedRole}
+                                isEditingRole={this.props.roles.isEditing}
+                                finishEditingRole={this.props.finishEditingRole}
                                 roles={this.props.roles}/>
                         </TabPane>
                     </TabContent>
@@ -128,7 +133,7 @@ class Manual extends Component {
 }
 
 function mapStateToProps(state) {
-    return {players: state.players, roles: state.roles};
+    return {players: state.players, roles: state.roles,};
 }
 
 function mapDispatchToProps(dispatch) {
@@ -140,13 +145,21 @@ function mapDispatchToProps(dispatch) {
         removePlayer: (player) => {
             dispatch(removePlayer(player))
         },
-        addRole: (name, descr, amount) => {
-            dispatch(addRole(createRole(name, descr, amount)))
+        addRole: (role) => {
+            dispatch(addRole(createRole(role.name, role.description, role.count)))
         },
-        removeRole: (role) => {
-            dispatch(removeRole(role))
+        removeRole: (id) => {
+            dispatch(removeRole(id))
         },
-
+        startEditingRole: (role) => {
+            dispatch(startEditingRole(role))
+        },
+        hasEditedRole: (role) => {
+            dispatch(hasEditedRole(role))
+        },
+        finishEditingRole: () => {
+            dispatch(finishEditingRole())
+        }
     }
 }
 

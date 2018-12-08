@@ -14,10 +14,22 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.item__chevron{
+
+a, a:hover {
+    color: gainsboro;
+    text-decoration: none;
+
+}
+
+a.active {
+    color: white;
+}
+
+.item__chevron {
     transition: transform .35s;
 
 }
-.item__chevron--collapsed{
+
+.item__chevron--collapsed {
     transform: rotate(180deg);
 }

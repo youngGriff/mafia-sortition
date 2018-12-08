@@ -3,6 +3,8 @@ import {Button, Container, FormGroup, Label} from "reactstrap";
 import {AvForm, AvField} from 'availity-reactstrap-validation';
 import connect from "react-redux/es/connect/connect";
 import {register} from "../../helpers/auth";
+import {Redirect} from "react-router";
+import {MANUAL} from "../../helpers/routesConstants";
 
 class RegisterPage extends Component {
     constructor(props) {
@@ -11,7 +13,7 @@ class RegisterPage extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
             email: '',
-            name: '',
+            nickname: '',
             password: ''
         }
     }
@@ -24,19 +26,23 @@ class RegisterPage extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
+        this.props.signUp(this.state);
     }
 
     render() {
+        const {auth} = this.props;
+        if (auth.uid)
+            return <Redirect to={MANUAL}/>
         return (
             <Container>
                 <h2 className='py-3'>Register</h2>
-                <AvForm onSubmitValid={this.handleSubmit}>
+                <AvForm onValidSubmit={this.handleSubmit}>
                     <FormGroup>
                         <Label>Nickname</Label>
                         <AvField
                             autoFocus
                             type="text"
-                            name="name"
+                            name="nickname"
                             value={this.state.name}
                             onChange={this.handleChange}
                         />
@@ -78,13 +84,12 @@ class RegisterPage extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        signUp: (creds) => dispatch(register(creds))
+        signUp: (creds) => register(creds)
     }
 }
 
 function mapStateToProps(state) {
     return {
-        authError: state.auth.authError,
         auth: state.firebase.auth
 
     }

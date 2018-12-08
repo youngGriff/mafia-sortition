@@ -26,9 +26,9 @@ class ManualPlayerContainer extends React.Component {
                 <AddPlayerDialog open={this.state.modal} toggle={this.toggle}
                                  handleAdd={this.props.addPlayer}/>
 
-                <Button size='lg' onClick={this.toggle} className='mt-5' style={{margin: 'auto'}} color="success">Add
+                <Button size='lg' onClick={this.toggle} className='mt-5 mx-auto'  color="success">Add
                     new Player</Button>
-                <div className='mt-3' >Total players: {this.props.players.length}</div>
+                <div className='mt-3 mx-auto' >Total players: {this.props.players.length}</div>
                 <PlayerList removePlayer={this.props.removePlayer} players={this.props.players}/>
             </Fragment>);
     }

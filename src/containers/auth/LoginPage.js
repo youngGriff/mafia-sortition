@@ -2,10 +2,9 @@ import React, {Component} from 'react';
 import {Button, Container, FormGroup, Label} from "reactstrap";
 import {AvForm, AvField} from 'availity-reactstrap-validation';
 import {connect} from "react-redux";
-import {getFirebase} from "react-redux-firebase";
-import {getFirestore} from "redux-firestore";
-import {startLoading, stopLoading} from "../../store/acrions/loading";
 import {signIn} from "../../helpers/auth";
+import {Redirect} from "react-router";
+import {MANUAL} from "../../helpers/routesConstants";
 
 class LoginPage extends Component {
     constructor(props) {
@@ -26,13 +25,17 @@ class LoginPage extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
+        this.props.login(this.state);
     }
 
     render() {
+        const {auth} = this.props;
+        if (auth.uid)
+            return <Redirect to={MANUAL}/>
         return (
             <Container>
                 <h2 className='py-3'>Login</h2>
-                <AvForm onSubmitValid={this.handleSubmit}>
+                <AvForm onValidSubmit={this.handleSubmit}>
 
                     <FormGroup controlId="email">
                         <Label>Email</Label>
@@ -70,22 +73,15 @@ class LoginPage extends Component {
     }
 }
 
-const login = (creds) => (dispatch, getState, {getFirebase, getFirestore}) => {
-    dispatch(startLoading());
-    const firebase = getFirebase();
-    signIn(firebase, creds)
-        .finally(() => dispatch(stopLoading()));
-}
 
 const mapDispatchToProps = dispatch => {
     return {
-        signIn: (creds) => dispatch(login(creds))
+        login: (creds) => signIn(creds)
     }
 }
 
 function mapStateToProps(state) {
     return {
-        authError: state.auth.authError,
         auth: state.firebase.auth
 
     }

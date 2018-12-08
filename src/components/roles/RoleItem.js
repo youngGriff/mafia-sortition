@@ -1,6 +1,7 @@
 import React from 'react'
 import {Button, Card, CardBody, CardTitle, CardHeader, Collapse} from "reactstrap";
 import classnames from 'classnames';
+import styles from './roleItem.css';
 
 export class RoleItem extends React.Component {
     constructor(props) {
@@ -10,6 +11,8 @@ export class RoleItem extends React.Component {
         };
         this.toggle = this.toggle.bind(this);
         this.handleRemove = this.handleRemove.bind(this);
+        this.handleEdit = this.handleEdit.bind(this);
+
     }
 
     toggle() {
@@ -20,7 +23,6 @@ export class RoleItem extends React.Component {
 
     render() {
         const {role} = this.props;
-        console.log(this.props);
         return (
             <Card className='mt-3'>
                 <CardHeader>
@@ -38,7 +40,13 @@ export class RoleItem extends React.Component {
                             <span onClick={this.handleRemove}
                                   className="float-right">
                             <i
-                                className="fas fa-trash-alt text-danger my-auto mr-2"/></span></div>
+                                className="fas fa-trash-alt text-danger my-auto mr-2 "/></span>
+                            <span onClick={this.handleEdit}
+                                  className="float-right">
+                            <i
+                                className="fas fa-edit text-success my-auto mr-2"/></span>
+                        </div>
+
                         {role.description}
 
                         <br/>
@@ -50,7 +58,12 @@ export class RoleItem extends React.Component {
             ;
     }
 
+    handleEdit() {
+        this.props.startEditingRole(this.props.role)
+    }
+
     handleRemove() {
-        this.props.removeRole(this.props.role);
+
+        this.props.removeRole(this.props.role.id);
     }
 }

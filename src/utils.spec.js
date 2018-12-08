@@ -1,4 +1,4 @@
-import {countOfPlayersWithRole, createPlayer, createRole, makeSortition, transformRoles} from './utils'
+import {countOfPlayersWithRole, createPlayer, createRole, makeSortition, transformRoles} from './helpers/utils'
 
 const initialState = [createRole('Mafia', 'Wins with mafia . Each night team choose player to kill him', 2),
     createRole('Godfather', 'The head of the Mafia... the Godfather wakes and acts with the Mafia each night. The Godfather appears as a Civilian when investigated by the Detective. The Mafia lose if the Godfather dies.'),
