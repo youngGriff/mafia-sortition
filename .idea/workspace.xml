@@ -2,32 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bc73dc9-c644-41e2-819c-25b3ded377f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/header/SignedLinks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/unsignedLinks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/roles/roleItem.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/routesConstants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.firebase/hosting.ZGlzdA.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/markdown-exported-files.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/asset-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/precache-manifest.2ee9d3bf73e2ccfa36bc2ac94798d6cc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/service-worker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/static/css/1.4ef4d0e3.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/static/css/1.4ef4d0e3.chunk.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/static/css/main.c47009b7.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/static/css/main.c47009b7.chunk.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/static/js/1.ea10b0cf.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/static/js/1.ea10b0cf.chunk.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/static/js/main.d0f5f079.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/static/js/main.d0f5f079.chunk.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/static/js/runtime~main.229c360f.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/static/js/runtime~main.229c360f.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/firebase/privateConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/auth/LoginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/RegisterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/auth/RegisterPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/players/ManualPlayerContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/players/ManualPlayerContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/players/PlayerItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/players/PlayerItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/players/PlayerList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/players/PlayerList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/roles/ManualRoleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/roles/ManualRoleController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/roles/RoleDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/roles/RoleDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/roles/RoleItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/roles/RoleItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/manual.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/manual.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/acrions/roles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/acrions/roles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/loading.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/manual_players.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/manual_players.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/roles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/roles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,79 +38,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1649028904">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="10" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.33" value="1" />
-          <entry key="project.open.time.37" value="1" />
-          <entry key="project.open.time.38" value="1" />
-          <entry key="project.open.time.39" value="1" />
-          <entry key="project.open.time.44" value="1" />
-          <entry key="project.open.time.45" value="1" />
-          <entry key="project.open.time.46" value="2" />
-          <entry key="project.opened" value="11" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="css" value="16" />
-          <entry key="gitignore" value="3" />
-          <entry key="html" value="2" />
-          <entry key="js" value="258" />
-          <entry key="json" value="9" />
-          <entry key="lock" value="3" />
-          <entry key="log" value="1" />
-          <entry key="ts" value="28" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="16" />
-          <entry key="HTML" value="2" />
-          <entry key="JSON" value="9" />
-          <entry key="JavaScript" value="258" />
-          <entry key="PLAIN_TEXT" value="4" />
-          <entry key="TypeScript" value="28" />
-          <entry key="yarn.lock" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.js.language.service.starts">
-        <counts>
-          <entry key="ESLintLanguageService" value="11" />
-          <entry key="TypeScriptServerServiceImpl" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="css" value="262" />
-          <entry key="gitignore" value="59" />
-          <entry key="html" value="1" />
-          <entry key="js" value="12190" />
-          <entry key="json" value="17" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="262" />
-          <entry key="HTML" value="1" />
-          <entry key="JSON" value="17" />
-          <entry key="JavaScript" value="12190" />
-          <entry key="PLAIN_TEXT" value="59" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/manual.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2392">
-              <caret line="145" column="42" lean-forward="true" selection-start-line="145" selection-start-column="42" selection-end-line="145" selection-end-column="42" />
+            <state relative-caret-position="897">
+              <caret line="145" column="42" selection-start-line="145" selection-start-column="42" selection-end-line="145" selection-end-column="42" />
               <folding>
                 <element signature="n#!!block;n#constructor#0;n#Manual#0" />
                 <element signature="n#!!block;n#toggle#0;n#Manual#0" />
@@ -120,10 +54,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/roles/ManualRoleController.js">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="230">
+              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/serviceWorker.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-75">
+              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -131,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/helpers/utils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state>
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -140,17 +83,49 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/roles/RoleDialog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="41" column="36" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+            <state relative-caret-position="1081">
+              <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/reducers/roles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/store/reducers/roles.js">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="184">
+                <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="138">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-276">
+              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -158,7 +133,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/constants.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
+            <state>
               <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
             </state>
           </provider>
@@ -180,7 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/containers/manual.css" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/components/PlayerList.js" />
         <option value="$PROJECT_DIR$/src/components/PlayerItem.js" />
@@ -197,9 +171,7 @@
         <option value="$PROJECT_DIR$/src/components/AddPlayerDialog.js" />
         <option value="$PROJECT_DIR$/src/components/RoleDialog.js" />
         <option value="$PROJECT_DIR$/src/components/LoginPage.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/auth/login.css" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/store/acrions/loading.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/loading.js" />
         <option value="$PROJECT_DIR$/src/firebase/privateConfig.js" />
@@ -231,24 +203,11 @@
         <option value="$PROJECT_DIR$/src/containers/manual.js" />
         <option value="$PROJECT_DIR$/src/components/roles/RoleDialog.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/roles.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
-    <package-json value="$PROJECT_DIR$/package.json" />
-  </component>
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/package.json" />
-    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="70" />
@@ -275,79 +234,7 @@
             <path>
               <item name="mafia" type="b2602c69:ProjectViewProjectNode" />
               <item name="mafia" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mafia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mafia" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mafia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mafia" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mafia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mafia" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="players" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mafia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mafia" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="roles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mafia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mafia" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mafia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mafia" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mafia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mafia" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="firebase" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mafia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mafia" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mafia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mafia" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mafia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mafia" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="acrions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mafia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mafia" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -371,16 +258,16 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2018.2.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WEB\Eleks\mafia\dist" />
       <recent name="D:\WEB\Eleks\mafia\src\helpers" />
       <recent name="D:\WEB\Eleks\mafia\src\containers" />
       <recent name="D:\WEB\Eleks\mafia\src\components\players" />
       <recent name="D:\WEB\Eleks\mafia\src\components\roles" />
-      <recent name="D:\WEB\Eleks\mafia\src\components\auth" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -396,7 +283,7 @@
     </option>
   </component>
   <component name="RunManager" selected="npm.start">
-    <configuration name="Check total role count" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+    <configuration name="Check total role count" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <working-dir value="$PROJECT_DIR$" />
@@ -408,7 +295,7 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Sortition" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+    <configuration name="Sortition" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <working-dir value="$PROJECT_DIR$" />
@@ -420,7 +307,7 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Transform Roles" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+    <configuration name="Transform Roles" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <working-dir value="$PROJECT_DIR$" />
@@ -432,19 +319,17 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="renders without crashing" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
       <node-interpreter value="project" />
-      <node-options value="" />
-      <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/App.test.js" />
-      <test-names>
-        <test-name value="renders without crashing" />
-      </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -455,19 +340,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="npm.start" />
-      <item itemvalue="Jest.renders without crashing" />
       <item itemvalue="Jest.Check total role count" />
       <item itemvalue="Jest.Transform Roles" />
       <item itemvalue="Jest.Sortition" />
+      <item itemvalue="npm.start" />
+      <item itemvalue="npm.build" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
         <item itemvalue="Jest.Sortition" />
         <item itemvalue="Jest.Transform Roles" />
         <item itemvalue="Jest.Check total role count" />
-        <item itemvalue="Jest.renders without crashing" />
       </list>
     </recent_temporary>
   </component>
@@ -491,7 +376,9 @@
       <workItem from="1543860543661" duration="6715000" />
       <workItem from="1543921677974" duration="191000" />
       <workItem from="1544269689409" duration="16384000" />
-      <workItem from="1544295416398" duration="5706000" />
+      <workItem from="1544295416398" duration="7127000" />
+      <workItem from="1544460159316" duration="971000" />
+      <workItem from="1544461253813" duration="2326000" />
     </task>
     <servers />
   </component>
@@ -528,19 +415,19 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118846000" />
+    <option name="totallyTimeSpent" value="123564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="839" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8476395" visible="true" weight="0.24966975" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.51641136" visible="true" weight="0.24900925" />
       <window_info id="Structure" order="1" sideWeight="0.16309012" side_tool="true" weight="0.24966975" />
-      <window_info id="npm" order="2" sideWeight="0.15236051" side_tool="true" weight="0.24966975" />
+      <window_info id="npm" order="2" sideWeight="0.48358864" side_tool="true" visible="true" weight="0.24900925" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4993395" weight="0.32900432" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.497358" visible="true" weight="0.32900432" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.497358" weight="0.32697946" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -548,8 +435,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50264204" side_tool="true" weight="0.32756132" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.497358" weight="0.32756132" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5033025" side_tool="true" weight="0.32756132" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4966975" visible="true" weight="0.32991204" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -579,38 +466,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/reactstrap/src/NavbarBrand.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SortitionItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/reactstrap/lib/ModalHeader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/reactstrap/src/InputGroup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/reactstrap/src/FormGroup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -643,32 +499,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/auth/login.css" />
     <entry file="file://$PROJECT_DIR$/node_modules/reactstrap/src/Label.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3">
           <caret line="54" column="6" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -874,27 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/roles/ManualRoleController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/helpers/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/acrions/roles.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -902,10 +716,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/roles/ManualRoleController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helpers/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/roles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/roles/RoleDialog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1081">
+          <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/static/css/1.4ef4d0e3.chunk.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1380" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-276">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/manual.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2392">
-          <caret line="145" column="42" lean-forward="true" selection-start-line="145" selection-start-column="42" selection-end-line="145" selection-end-column="42" />
+        <state relative-caret-position="897">
+          <caret line="145" column="42" selection-start-line="145" selection-start-column="42" selection-end-line="145" selection-end-column="42" />
           <folding>
             <element signature="n#!!block;n#constructor#0;n#Manual#0" />
             <element signature="n#!!block;n#toggle#0;n#Manual#0" />
@@ -913,17 +777,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/roles/RoleDialog.js">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="41" column="36" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+        <state relative-caret-position="230">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers/roles.js">
+    <entry file="file://$PROJECT_DIR$/src/serviceWorker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="-75">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="184">
+            <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
         </state>
       </provider>
     </entry>
