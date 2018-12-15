@@ -20,9 +20,6 @@ export function countOfPlayersWithRole(roles) {
     return roles.reduce((total, item) => total + item.count, 0)
 }
 
-export function createEmptyRole() {
-    return createRole('');
-}
 
 export function makeSortition(players, roles) {
 
@@ -60,4 +57,10 @@ export function transformRoles(roles) {
         }
         return final;
     }, []);
+}
+
+export const checkSortitionEnabled = (players, roles) => {
+    const rolesLength = countOfPlayersWithRole(roles);
+    return players.length >= rolesLength
+        && players.length > 0 && rolesLength > 0;
 }

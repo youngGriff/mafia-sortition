@@ -1,26 +1,20 @@
 import React from 'react';
-import {Nav, NavItem, NavLink as BootstrapLink} from "reactstrap";
-import {NavLink} from "react-router-dom";
+import {Nav, NavItem} from "reactstrap";
 import {signOut} from "../../helpers/auth";
-import {MANUAL} from "../../helpers/routesConstants";
+import {CREATE_GAME, DASHBOARD, MANUAL} from "../../helpers/routesConstants";
+import {NavLink} from "react-router-dom";
 
 const SignedLinks = () => {
     return (
-        <Nav>
+        <Nav className='ml-auto'  navbar>
             <NavItem>
-                <BootstrapLink>
-                    <NavLink to={MANUAL}>Create new Game</NavLink>
-                </BootstrapLink>
+                <NavLink to={CREATE_GAME} exact className='nav-link'>Create new Game</NavLink>
             </NavItem>
             <NavItem>
-                <BootstrapLink>
-                    <NavLink to={MANUAL}>Dashboard</NavLink>
-                </BootstrapLink>
+                <NavLink to={DASHBOARD} className='nav-link' exact>Dashboard</NavLink>
             </NavItem>
             <NavItem>
-                <BootstrapLink>
-                    <NavLink onClick={signOut} to='/'>Log out</NavLink>
-                </BootstrapLink>
+                <NavLink onClick={signOut} className='nav-link' exact to={MANUAL}>Log out</NavLink>
             </NavItem>
 
         </Nav>

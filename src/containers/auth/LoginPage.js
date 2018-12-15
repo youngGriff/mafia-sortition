@@ -42,6 +42,7 @@ class LoginPage extends Component {
                         <AvField
                             autoFocus
                             type="email"
+                            required
                             name="email"
                             value={this.state.email}
                             onChange={this.handleChange}

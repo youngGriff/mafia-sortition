@@ -7,8 +7,8 @@ class PlayerList extends PureComponent {
     render() {
         const {players} = this.props;
         return (
-            <div className='  '>
-                {players.map(player => {
+            <div className=' '>
+                {players && players.map(player => {
                     return <PlayerItem removePlayer={this.props.removePlayer} player={player}/>
                 })}
             </div>

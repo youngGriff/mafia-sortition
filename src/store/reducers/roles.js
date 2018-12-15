@@ -37,14 +37,13 @@ export function rolesReducer(state = initialState, action) {
 
         case constants.ACTION_MANUAL_HAS_EDITED_ROLE:
 
-            const newRoles = state.roles.filter((value => {
-                return value.id !== action.payload.id;
-            }));
-            console.log(newRoles);
-            newRoles.push(action.payload);
-            console.log(newRoles);
 
-
+            const newRoles = [...state.roles];
+            newRoles.forEach((item, index, array) => {
+                if (item.id === action.payload.id) {
+                    array[index] = action.payload;
+                }
+            });
             return {...state, isEditing: false, editingRole: null, roles: newRoles};
         default:
             return state;

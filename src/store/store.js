@@ -15,10 +15,10 @@ const rootReducer = combineReducers({
 });
 const store = createStore(rootReducer,
     composeWithDevTools(
-        applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore}),),
+        applyMiddleware(thunk),
         reactReduxFirebase(fbConfig, {
-     /*       userProfile: 'users',
-            useFirestoreForProfile: true,*/
+            userProfile: 'users',
+            useFirestoreForProfile: true,
         }), reduxFirestore(fbConfig)));
 
 export default store;

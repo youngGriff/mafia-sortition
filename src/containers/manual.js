@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {countOfPlayersWithRole, createPlayer, createRole, makeSortition} from "../helpers/utils";
+import {checkSortitionEnabled, countOfPlayersWithRole, createPlayer, createRole, makeSortition} from "../helpers/utils";
 import {addPlayer, removePlayer} from "../store/acrions/players";
 import ManualPlayerContainer from "../components/players/ManualPlayerContainer";
 import ManualRoleContainer from "../components/roles/ManualRoleController";
@@ -11,12 +11,11 @@ import {
     NavLink,
     TabContent,
     TabPane,
-    NavbarBrand, Navbar, Container
 } from "reactstrap";
 import classnames from 'classnames';
 import {
     addRole,
-    editRole,
+
     finishEditingRole,
     hasEditedRole,
     removeRole,
@@ -34,7 +33,7 @@ class Manual extends Component {
             showSortition: false
         };
         this.toggle = this.toggle.bind(this);
-        this.checkSortitionEnabled = this.checkSortitionEnabled.bind(this);
+        this.checkSortitionPossible = this.checkSortitionPossible.bind(this);
         this.makeSortition = this.makeSortition.bind(this);
         this.hideSortitionDialog = this.hideSortitionDialog.bind(this);
     }
@@ -53,9 +52,9 @@ class Manual extends Component {
         }
     }
 
-    checkSortitionEnabled() {
+    checkSortitionPossible() {
         const {players, roles} = this.props;
-        return players.length >= countOfPlayersWithRole(roles.roles);
+        return checkSortitionEnabled(players,roles.roles)
     }
 
     makeSortition() {
@@ -73,7 +72,7 @@ class Manual extends Component {
         return (
             <div>
 
-                <Nav className='px-5' pills tabs>
+                <Nav className='px-5 py-2' pills tabs>
 
                     <NavItem className='d-inline-block'>
                         <NavLink
@@ -95,8 +94,8 @@ class Manual extends Component {
                             Roles
                         </NavLink>
                     </NavItem>
-                    <NavItem className='d-inline-block ml-auto'>
-                        <Button disabled={!this.checkSortitionEnabled()} onClick={this.makeSortition}
+                    <NavItem className=' ml-auto'>
+                        <Button disabled={!this.checkSortitionPossible()} onClick={this.makeSortition}
                                 color='primary'>Make
                             Sortition</Button>
                     </NavItem>
