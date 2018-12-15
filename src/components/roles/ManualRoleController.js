@@ -18,7 +18,7 @@ class ManualRoleContainer extends React.Component {
 
 
     static defaultProps = {
-        isMyGame: true
+        showEditComponents: true
     };
 
     getEditComponents() {

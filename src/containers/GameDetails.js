@@ -17,7 +17,6 @@ import {compose} from "redux";
 import {firestoreConnect} from "react-redux-firebase";
 import {getUid} from "../helpers/auth";
 import {checkSortitionEnabled} from "../helpers/utils";
-import RoleList from "../components/roles/RoleList";
 import ManualRoleContainer from "../components/roles/ManualRoleController";
 import {finishEditingRole, hasEditedRole, startEditingRole} from "../store/acrions/roles";
 
