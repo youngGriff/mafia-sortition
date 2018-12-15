@@ -9,28 +9,42 @@ class ManualRoleContainer extends React.Component {
     constructor(props) {
         super(props);
         this.toggle = this.toggle.bind(this);
+        this.getEditComponents = this.getEditComponents.bind(this);
         this.state = {
             openModal: false,
             openEditing: this.props.isEditingRole
         }
     }
 
-    render() {
-        const {addRole, hasEditedRole, ...others} = {...this.props};
+
+    static defaultProps = {
+        isMyGame: true
+    };
+
+    getEditComponents() {
+        const {addRole, hasEditedRole, ...others} = this.props;
         return (
-            <div>
+            <Fragment>
                 {this.state.openModal ?
                     <RoleDialog handleSubmit={addRole} toggle={this.toggle} open={this.state.openModal}/> : null}
-                {this.state.openEditing ? <RoleDialog role={this.props.roles.editingRole} handleSubmit={hasEditedRole}
+                {this.state.openEditing ? <RoleDialog role={this.props.editingRole} handleSubmit={hasEditedRole}
                                                       toggle={this.props.finishEditingRole}
                                                       open={this.state.openEditing}/> : null}
-
                 <Button onClick={this.toggle} className='mt-3' color="danger">Add new Role</Button>
+            </Fragment>
+        )
+    }
 
-                <div className='mt-3'>Total roles: {this.props.roles.roles.length}</div>
-                <div className='mt-3'>Count players with roles: {countOfPlayersWithRole(this.props.roles.roles)}</div>
+    render() {
+        const {addRole, hasEditedRole, ...others} = this.props;
+        return (
+            <div>
 
-                <RoleList {...others} roles={this.props.roles.roles}/>
+                {this.props.showEditComponents ? this.getEditComponents() : null}
+                <div className='mt-3'>Total roles: {this.props.roles.length}</div>
+                <div className='mt-3'>Count players with roles: {countOfPlayersWithRole(this.props.roles)}</div>
+
+                <RoleList {...others} roles={this.props.roles}/>
 
             </div>
         );

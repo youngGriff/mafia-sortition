@@ -5,11 +5,11 @@ import PlayerItem from "./PlayerItem";
 class PlayerList extends PureComponent {
 
     render() {
-        const {players} = this.props;
+        const {players,showDelete = true} = this.props;
         return (
             <div className=' '>
                 {players && players.map(player => {
-                    return <PlayerItem removePlayer={this.props.removePlayer} player={player}/>
+                    return <PlayerItem showDelete={showDelete} removePlayer={this.props.removePlayer} player={player}/>
                 })}
             </div>
         );

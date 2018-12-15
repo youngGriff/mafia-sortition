@@ -3,13 +3,23 @@ import {connect} from 'react-redux';
 
 import classnames from 'classnames';
 import PlayerList from "../components/players/PlayerList";
-import {Button, Nav, NavItem, NavLink, TabContent, TabPane} from "reactstrap";
-import {cancelRequestForGame, isMyGame, makeRequestForGame, removePlayer} from "../helpers/game";
+import {Button, Container, Nav, NavItem, NavLink, TabContent, TabPane} from "reactstrap";
+import {
+    addRole,
+    cancelRequestForGame,
+    editRole,
+    isMyGame,
+    makeRequestForGame,
+    removePlayer,
+    removeRole
+} from "../helpers/game";
 import {compose} from "redux";
 import {firestoreConnect} from "react-redux-firebase";
-import firebase from "../firebase/firebaseConfig";
-import {getUid, getUidOrEmptyString} from "../helpers/auth";
+import {getUid} from "../helpers/auth";
 import {checkSortitionEnabled} from "../helpers/utils";
+import RoleList from "../components/roles/RoleList";
+import ManualRoleContainer from "../components/roles/ManualRoleController";
+import {finishEditingRole, hasEditedRole, startEditingRole} from "../store/acrions/roles";
 
 class GameDetails extends Component {
     constructor(props) {
@@ -34,7 +44,6 @@ class GameDetails extends Component {
     }
 
     getActionButton() {
-        console.log(this.props.isMyGame);
         const players = this.props.game.players || [];
         const roles = this.props.game.roles || [];
 
@@ -51,7 +60,6 @@ class GameDetails extends Component {
     }
 
     render() {
-        const {game} = this.props;
         return (
             <div>
                 <Nav className='px-5 py-2' pills tabs>
@@ -82,25 +90,34 @@ class GameDetails extends Component {
 
 
                 </Nav>
-                <TabContent activeTab={this.state.activeTab}>
-                    <TabPane tabId="1">
-                        <div className='mt-3 mx-auto'>Total players:</div>
-                        <PlayerList removePlayer={this.props.removePlayer} players={[]}/>-
-                    </TabPane>
-                    <TabPane tabId="2">
-                        w
-                    </TabPane>
-                </TabContent>
+                <Container>
+                    <TabContent activeTab={this.state.activeTab}>
+                        <TabPane tabId="1">
+                            <div className='mt-3 mx-auto'>Total players: {this.props.players.length}</div>
+                            <PlayerList showDelete={isMyGame(this.props.game)} removePlayer={this.props.removePlayer}
+                                        players={this.props.players}/>
+                        </TabPane>
+                        <TabPane tabId="2">
+                            <ManualRoleContainer roles={this.props.roles} startEditingRole={this.props.startEditingRole}
+                                                 hasEditedRole={this.props.hasEditedRole}
+                                                 editingRole={this.props.rolesController.editingRole}
+                                                 addRole={this.props.addRole}
+                                                 isEditingRole={this.props.rolesController.isEditing}
+                                                 finishEditingRole={this.props.finishEditingRole}
+                                                 removeRole={this.props.removeRole}
+                                                 showEditComponents={isMyGame(this.props.game)}
+                                                 isMyGame={this.props.isMyGame}/>
+                        </TabPane>
+                    </TabContent>
+                </Container>
             </div>
         );
     }
 
     getRequestButton() {
         const players = this.props.game.players;
-        console.log('getRequestButton', this.props.game);
 
-        console.log('getRequestButton', players);
-        if (players && this.findPlayer(getUid())) {
+        if (players && this.isPlaying(getUid())) {
             return (<NavItem className=' ml-auto'>
                 <Button color='primary' onClick={this.cancelRequest}>Cancel Request</Button>
             </NavItem>)
@@ -119,11 +136,10 @@ class GameDetails extends Component {
         cancelRequestForGame(this.props.game);
     }
 
-    findPlayer(uid) {
+    isPlaying(uid) {
         const n = this.props.game.players.filter(item => {
             return item === uid
         }).length;
-        console.log('find Player ', n);
         return n > 0;
     }
 }
@@ -135,16 +151,42 @@ function mapStateToProps(state, ownProps) {
         return item.id === id
     });
     const game = games[0] || {};
+    const users = state.firestore.ordered.users || [];
+    const players = users.filter(user => {
+        const isPlaying = game.players.includes(user.id);
+        return isPlaying;
+    });
+    const roles = game.roles || [];
     return {
         game,
+        players,
+        roles,
+        rolesController: state.roles,
         isMyGame: isMyGame(game)
     };
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch, ownProps) {
+    const gameId = ownProps.match.params.id;
     return {
         removePlayer: (player) => {
-            return removePlayer(player)
+            return removePlayer(player, gameId)
+        },
+        addRole: (role) => {
+            return addRole(role, gameId);
+        },
+        hasEditedRole: (role) => {
+            return editRole(role, gameId)
+        },
+        startEditingRole: (role) => {
+            dispatch(startEditingRole(role))
+        },
+
+        finishEditingRole: () => {
+            dispatch(finishEditingRole())
+        },
+        removeRole: (id) => {
+            return removeRole(id,gameId);
         }
     }
 }
@@ -152,9 +194,8 @@ function mapDispatchToProps(dispatch) {
 export default compose(
     firestoreConnect([{
         collection: 'games',
-        //  where: ['author', '==', getUidOrEmptyString()]
     },
-
+        {collection: 'users'}
     ])
     , connect(
         mapStateToProps, mapDispatchToProps

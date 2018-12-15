@@ -12,7 +12,9 @@ export const register = (credentials) => {
         credentials.password)
         .then(resp => {
             return firestore.collection('users').doc(resp.user.uid).set({
-                nickname: credentials.nickname,
+                firstName: credentials.firstName,
+                lastName: credentials.lastName,
+
             })
         })
 };

@@ -17,6 +17,7 @@ export default class RoleDialog extends React.Component {
 
     handleChange = event => {
         this.setState({[event.target.name]: event.target.value});
+
     };
 
 
@@ -58,8 +59,7 @@ export default class RoleDialog extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log({...this.state});
-        this.props.handleSubmit({...this.state});
+        this.props.handleSubmit({...this.state, count: Number(this.state.count)});
         this.props.toggle();
     }
 

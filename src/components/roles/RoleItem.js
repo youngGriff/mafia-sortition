@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import {Button, Card, CardBody, CardTitle, CardHeader, Collapse} from "reactstrap";
 import classnames from 'classnames';
 import styles from './roleItem.css';
@@ -12,13 +12,26 @@ export class RoleItem extends React.Component {
         this.toggle = this.toggle.bind(this);
         this.handleRemove = this.handleRemove.bind(this);
         this.handleEdit = this.handleEdit.bind(this);
-
+        this.getEditComponents = this.getEditComponents.bind(this);
     }
 
     toggle() {
         this.setState({
             collapse: !this.state.collapse
         });
+    }
+
+    getEditComponents() {
+        return <Fragment>
+                 <span onClick={this.handleRemove}
+                       className="float-right">
+                            <i
+                                className="fas fa-trash-alt text-danger my-auto mr-2 "/></span>
+            <span onClick={this.handleEdit}
+                  className="float-right">
+                            <i
+                                className="fas fa-edit text-success my-auto mr-2"/></span>
+        </Fragment>
     }
 
     render() {
@@ -37,14 +50,7 @@ export class RoleItem extends React.Component {
                 <Collapse isOpen={this.state.collapse}>
                     <CardBody>
                         <div className=''><span>Count: {role.count}</span>
-                            <span onClick={this.handleRemove}
-                                  className="float-right">
-                            <i
-                                className="fas fa-trash-alt text-danger my-auto mr-2 "/></span>
-                            <span onClick={this.handleEdit}
-                                  className="float-right">
-                            <i
-                                className="fas fa-edit text-success my-auto mr-2"/></span>
+                            {this.props.showEditComponents ? this.getEditComponents() : null}
                         </div>
 
                         {role.description}

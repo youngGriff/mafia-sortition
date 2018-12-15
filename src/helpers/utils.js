@@ -8,6 +8,8 @@ export function createPlayer(firstName, lastName) {
     }
 }
 
+export const getFullName = (player) => `${player.firstName} ${player.lastName}`;
+
 export function createRole(name, description = '', count = 1) {
     return {
         name,
@@ -17,7 +19,9 @@ export function createRole(name, description = '', count = 1) {
 }
 
 export function countOfPlayersWithRole(roles) {
-    return roles.reduce((total, item) => total + item.count, 0)
+    const result = roles.reduce((total, item) => total + item.count, 0);
+    console.log(result);
+    return result;
 }
 
 

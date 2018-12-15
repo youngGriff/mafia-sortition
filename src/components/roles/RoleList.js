@@ -9,8 +9,8 @@ class RoleList extends React.Component {
         const {roles, ...others} = this.props;
         return (
             <Fragment>
-                {roles.map(role => {
-                    return <RoleItem role={role} {...others}/>
+                {roles && roles.map(role => {
+                    return <RoleItem key={role.id} role={role} {...others}/>
                 })
                 }
             </Fragment>

@@ -13,7 +13,8 @@ class RegisterPage extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
             email: '',
-            nickname: '',
+            firstName: '',
+            lastName:'',
             password: ''
         }
     }
@@ -38,16 +39,26 @@ class RegisterPage extends Component {
                 <h2 className='py-3'>Register</h2>
                 <AvForm onValidSubmit={this.handleSubmit}>
                     <FormGroup>
-                        <Label>Nickname</Label>
+                        <Label>First Name</Label>
                         <AvField
                             autoFocus
                             type="text"
-                            name="nickname"
-                            value={this.state.name}
+                            name="firstName"
+                            value={this.state.firstName}
                             onChange={this.handleChange}
                         />
                     </FormGroup>
-                    <FormGroup controlId="email">
+                    <FormGroup>
+                        <Label>Last Name</Label>
+                        <AvField
+                            autoFocus
+                            type="text"
+                            name="lastName"
+                            value={this.state.lastName}
+                            onChange={this.handleChange}
+                        />
+                    </FormGroup>
+                    <FormGroup >
                         <Label>Email</Label>
                         <AvField
                             autoFocus

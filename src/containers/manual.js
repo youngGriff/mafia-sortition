@@ -120,9 +120,10 @@ class Manual extends Component {
 
                                 startEditingRole={this.props.startEditingRole}
                                 hasEditedRole={this.props.hasEditedRole}
+                                editingRole={this.props.roles.editingRole}
                                 isEditingRole={this.props.roles.isEditing}
                                 finishEditingRole={this.props.finishEditingRole}
-                                roles={this.props.roles}/>
+                                roles={this.props.roles.roles}/>
                         </TabPane>
                     </TabContent>
                 </div>
