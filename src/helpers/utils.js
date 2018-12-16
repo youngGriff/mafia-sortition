@@ -68,3 +68,10 @@ export const checkSortitionEnabled = (players, roles) => {
     return players.length >= rolesLength
         && players.length > 0 && rolesLength > 0;
 }
+export const createSortitionString = (list) => {
+    return list.reduce(((total, current) => {
+        const {player, role} = current;
+        return total + getFullName(player) + ' ' + role.name + '\n' + role.description + '.\n';
+
+    }), '');
+};

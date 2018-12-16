@@ -21,11 +21,18 @@ export const register = (credentials) => {
 export const signOut = () => {
     firebase.auth().signOut();
 };
+
 export function getUid() {
     return firebase.auth().currentUser.uid;
 }
+
 export const getUidOrEmptyString = () => {
 
 
     return firebase.auth().currentUser ? getUid() : '';
 };
+
+export const isSignedIn = () => {
+
+    return firebase.auth().currentUser &&  firebase.auth().currentUser.uid;
+}

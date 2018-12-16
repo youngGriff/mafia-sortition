@@ -5,7 +5,8 @@
 ## ToDo
 
  - [x] Online requisition
- - [ ] 404 Page
+ - [x] 404 Page
+ - [x] Auth guarding
  - [ ] Styling
  - [ ] Bug fixes
  - [ ] Issue and pull request template

@@ -4,8 +4,9 @@ import {AvField, AvForm} from "availity-reactstrap-validation";
 
 import {createNewGame} from "../helpers/game";
 import {Redirect} from "react-router";
-import {DASHBOARD} from "../helpers/routesConstants";
+import {DASHBOARD,MANUAL} from "../helpers/routesConstants";
 import {Button, Container, FormGroup, Label} from "reactstrap";
+import {isSignedIn} from "../helpers/auth";
 
 class CreateGame extends React.Component {
     constructor(props) {
@@ -41,6 +42,10 @@ class CreateGame extends React.Component {
     render() {
         if (this.state.gameCreated)
             return (<Redirect to={DASHBOARD}/>);
+        if(!isSignedIn()){
+            return (<Redirect to={MANUAL}/>);
+
+        }
         return (
             <Container>
                 <h2 className='py-3'>Create new Game</h2>

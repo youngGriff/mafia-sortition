@@ -19,7 +19,6 @@ class SortitionItem extends React.Component {
 
     render() {
         const {role, player} = this.props.sortitionItem;
-        console.log(this.props);
         return (
             <Card className='mt-3'>
                 <CardHeader>

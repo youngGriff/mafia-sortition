@@ -29,7 +29,7 @@ class Header extends Component {
         return (
             <Navbar color='dark' dark expand='md' >
                 <Container>
-                    <NavbarBrand className='text-white'><Link to={MANUAL}>Mafia</Link></NavbarBrand>
+                    <NavbarBrand ><Link className='text-white' to={MANUAL}>Mafia</Link></NavbarBrand>
                     <NavbarToggler onClick={this.toggle}/>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         {auth.uid ? <SignedLinks/> : <UnSignedLinks/>}

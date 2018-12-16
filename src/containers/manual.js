@@ -58,7 +58,6 @@ class Manual extends Component {
     }
 
     makeSortition() {
-        console.log(this.props);
         const {players, roles} = this.props;
 
         this.setState({

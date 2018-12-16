@@ -5,12 +5,17 @@ import {firestoreConnect} from "react-redux-firebase";
 import {Button, Card, CardBody, CardText, CardTitle, Container} from "reactstrap";
 import {NavLink} from "react-router-dom";
 import {GET_GAME_DETAIL, MANUAL} from "../helpers/routesConstants";
+import {isSignedIn} from "../helpers/auth";
+import {Redirect} from "react-router";
 
 class Dashboard extends Component {
 
     render() {
+        if(!isSignedIn()){
+            return (<Redirect to={MANUAL}/>);
+
+        }
         const games = this.props.games;
-        console.log(games);
         return (
             <Container className='py-3'>
                 {games && games.map((i) => {

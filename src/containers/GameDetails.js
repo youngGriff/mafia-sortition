@@ -15,16 +15,21 @@ import {
 } from "../helpers/game";
 import {compose} from "redux";
 import {firestoreConnect} from "react-redux-firebase";
-import {getUid} from "../helpers/auth";
-import {checkSortitionEnabled} from "../helpers/utils";
+import {getUid, isSignedIn} from "../helpers/auth";
+import {checkSortitionEnabled, makeSortition} from "../helpers/utils";
 import ManualRoleContainer from "../components/roles/ManualRoleController";
 import {finishEditingRole, hasEditedRole, startEditingRole} from "../store/acrions/roles";
+import SortitionDialog from "../components/SortittionDialog";
+import {Redirect} from "react-router";
+import {MANUAL} from "../helpers/routesConstants";
 
 class GameDetails extends Component {
     constructor(props) {
         super(props);
         this.state = {
             activeTab: '1',
+            sortitionList: [],
+            showSortition: false
 
         };
         this.toggle = this.toggle.bind(this);
@@ -32,6 +37,8 @@ class GameDetails extends Component {
         this.getRequestButton = this.getRequestButton.bind(this);
         this.makeRequest = this.makeRequest.bind(this);
         this.cancelRequest = this.cancelRequest.bind(this);
+        this.makeSortition = this.makeSortition.bind(this);
+        this.hideSortitionDialog = this.hideSortitionDialog.bind(this);
     }
 
     toggle(tab) {
@@ -42,6 +49,15 @@ class GameDetails extends Component {
         }
     }
 
+    makeSortition() {
+        const {players, roles} = this.props;
+
+        this.setState({
+            showSortition: true,
+            sortitionList: makeSortition(players, roles)
+        });
+    }
+
     getActionButton() {
         const players = this.props.game.players || [];
         const roles = this.props.game.roles || [];
@@ -50,6 +66,7 @@ class GameDetails extends Component {
             return <NavItem className=' ml-auto'>
                 <Button
                     disabled={!checkSortitionEnabled(players, roles)}
+                    onClick={this.makeSortition}
                     color='primary'>Make
                     Sortition</Button>
             </NavItem>
@@ -58,7 +75,17 @@ class GameDetails extends Component {
         }
     }
 
+    hideSortitionDialog() {
+        this.setState({
+            showSortition: false
+        });
+    }
+
     render() {
+        if (!isSignedIn()) {
+            return (<Redirect to={MANUAL}/>);
+
+        }
         return (
             <div>
                 <Nav className='px-5 py-2' pills tabs>
@@ -89,6 +116,10 @@ class GameDetails extends Component {
 
 
                 </Nav>
+                <SortitionDialog
+                    open={this.state.showSortition}
+                    sortitionList={this.state.sortitionList}
+                    toggle={this.hideSortitionDialog}/>
                 <Container>
                     <TabContent activeTab={this.state.activeTab}>
                         <TabPane tabId="1">
@@ -185,7 +216,7 @@ function mapDispatchToProps(dispatch, ownProps) {
             dispatch(finishEditingRole())
         },
         removeRole: (id) => {
-            return removeRole(id,gameId);
+            return removeRole(id, gameId);
         }
     }
 }

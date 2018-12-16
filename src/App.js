@@ -10,6 +10,8 @@ import {CREATE_GAME, DASHBOARD, GAME_DETAIL, LOGIN, MANUAL, REGISTER} from "./he
 import CreateGame from "./containers/CreateGame";
 import Dashboard from "./containers/Dashboard";
 import GameDetails from "./containers/GameDetails";
+import Page404 from "./components/Page404";
+import {isSignedIn} from "./helpers/auth";
 
 const App = () => {
 
@@ -26,6 +28,8 @@ const App = () => {
                     <Route path={CREATE_GAME} exact component={CreateGame}/>
                     <Route path={DASHBOARD} component={Dashboard}/>
                     <Route path={GAME_DETAIL} component={GameDetails}/>
+
+                    <Route component={Page404}/>
                 </Switch>
             </Fragment>
 
