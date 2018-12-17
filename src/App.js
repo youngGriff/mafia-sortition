@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import './App.css';
-import Manual from "./containers/manual";
+import Manual from "./containers/Manual";
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import {Switch} from "react-router";
 import LoginPage from "./containers/auth/LoginPage";

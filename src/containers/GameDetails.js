@@ -17,7 +17,7 @@ import {compose} from "redux";
 import {firestoreConnect} from "react-redux-firebase";
 import {getUid, isSignedIn} from "../helpers/auth";
 import {checkSortitionEnabled, makeSortition} from "../helpers/utils";
-import ManualRoleContainer from "../components/roles/ManualRoleController";
+import RoleContainer from "../components/roles/RoleController";
 import {finishEditingRole, hasEditedRole, startEditingRole} from "../store/acrions/roles";
 import SortitionDialog from "../components/SortittionDialog";
 import {Redirect} from "react-router";
@@ -128,15 +128,15 @@ class GameDetails extends Component {
                                         players={this.props.players}/>
                         </TabPane>
                         <TabPane tabId="2">
-                            <ManualRoleContainer roles={this.props.roles} startEditingRole={this.props.startEditingRole}
-                                                 hasEditedRole={this.props.hasEditedRole}
-                                                 editingRole={this.props.rolesController.editingRole}
-                                                 addRole={this.props.addRole}
-                                                 isEditingRole={this.props.rolesController.isEditing}
-                                                 finishEditingRole={this.props.finishEditingRole}
-                                                 removeRole={this.props.removeRole}
-                                                 showEditComponents={isMyGame(this.props.game)}
-                                                 isMyGame={this.props.isMyGame}/>
+                            <RoleContainer roles={this.props.roles} startEditingRole={this.props.startEditingRole}
+                                           hasEditedRole={this.props.hasEditedRole}
+                                           editingRole={this.props.rolesController.editingRole}
+                                           addRole={this.props.addRole}
+                                           isEditingRole={this.props.rolesController.isEditing}
+                                           finishEditingRole={this.props.finishEditingRole}
+                                           removeRole={this.props.removeRole}
+                                           showEditComponents={isMyGame(this.props.game)}
+                                           isMyGame={this.props.isMyGame}/>
                         </TabPane>
                     </TabContent>
                 </Container>

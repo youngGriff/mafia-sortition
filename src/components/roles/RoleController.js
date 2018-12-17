@@ -4,7 +4,7 @@ import RoleList from "./RoleList";
 import {Button} from "reactstrap";
 import {countOfPlayersWithRole} from "../../helpers/utils";
 
-class ManualRoleContainer extends React.Component {
+class RoleContainer extends React.Component {
 
     constructor(props) {
         super(props);
@@ -69,4 +69,4 @@ class ManualRoleContainer extends React.Component {
 }
 
 
-export default ManualRoleContainer;
+export default RoleContainer;

@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {checkSortitionEnabled, countOfPlayersWithRole, createPlayer, createRole, makeSortition} from "../helpers/utils";
 import {addPlayer, removePlayer} from "../store/acrions/players";
 import ManualPlayerContainer from "../components/players/ManualPlayerContainer";
-import ManualRoleContainer from "../components/roles/ManualRoleController";
+import RoleContainer from "../components/roles/RoleController";
 import {
     Button,
     Nav,
@@ -113,7 +113,7 @@ class Manual extends Component {
                                                    players={this.props.players}/>
                         </TabPane>
                         <TabPane tabId="2">
-                            <ManualRoleContainer
+                            <RoleContainer
                                 addRole={this.props.addRole}
                                 removeRole={this.props.removeRole}
 

@@ -14,7 +14,7 @@ class RegisterPage extends Component {
         this.state = {
             email: '',
             firstName: '',
-            lastName:'',
+            lastName: '',
             password: ''
         }
     }
@@ -58,7 +58,7 @@ class RegisterPage extends Component {
                             onChange={this.handleChange}
                         />
                     </FormGroup>
-                    <FormGroup >
+                    <FormGroup>
                         <Label>Email</Label>
                         <AvField
                             autoFocus
@@ -68,13 +68,16 @@ class RegisterPage extends Component {
                             onChange={this.handleChange}
                         />
                     </FormGroup>
-                    <FormGroup controlId="password">
+                    <FormGroup>
                         <Label>Password</Label>
                         <AvField
                             value={this.state.password}
                             name="password"
                             onChange={this.handleChange}
                             type="password"
+                            validate={{
+                                minLength: {value: 6, errorMessage: 'Your password must have at least 6 characters'},
+                            }}
                         />
                     </FormGroup>
                     <div className='d-flex '>
@@ -87,6 +90,7 @@ class RegisterPage extends Component {
                             Register
                         </Button>
                     </div>
+                    <p className='text-danger text-center mt-3'>{this.props.errorMessage}</p>
                 </AvForm>
             </Container>
         );
@@ -95,14 +99,14 @@ class RegisterPage extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        signUp: (creds) => register(creds)
+        signUp: (creds) => dispatch(register(creds))
     }
 }
 
 function mapStateToProps(state) {
     return {
-        auth: state.firebase.auth
-
+        auth: state.firebase.auth,
+        errorMessage: state.auth.registerError
     }
 }
 

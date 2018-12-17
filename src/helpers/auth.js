@@ -1,11 +1,20 @@
 import firebase from "../firebase/firebaseConfig";
+import {loginFailure, loginSuccess, registerFailure, registerSuccess} from "../store/acrions/auth";
 
-export const signIn = (credentials) => {
+export const signIn = (credentials) => dispatch => {
+
     firebase.auth().signInWithEmailAndPassword(
         credentials.email,
         credentials.password)
+        .then(authData => {
+                console.log('login', authData);
+
+                dispatch(loginSuccess())
+            }
+        )
+        .catch(e => dispatch(loginFailure(e)));
 };
-export const register = (credentials) => {
+export const register = (credentials) => (dispatch) => {
     const firestore = firebase.firestore();
     return firebase.auth().createUserWithEmailAndPassword(
         credentials.email,
@@ -14,9 +23,8 @@ export const register = (credentials) => {
             return firestore.collection('users').doc(resp.user.uid).set({
                 firstName: credentials.firstName,
                 lastName: credentials.lastName,
-
-            })
-        })
+            }).then(dispatch(registerSuccess())).catch(e => dispatch(registerFailure(e)))
+        }).catch(e => dispatch(registerFailure(e)))
 };
 export const signOut = () => {
     firebase.auth().signOut();
@@ -34,5 +42,5 @@ export const getUidOrEmptyString = () => {
 
 export const isSignedIn = () => {
 
-    return firebase.auth().currentUser &&  firebase.auth().currentUser.uid;
-}
+    return firebase.auth().currentUser && firebase.auth().currentUser.uid;
+};

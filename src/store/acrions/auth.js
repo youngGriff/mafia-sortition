@@ -1,12 +1,32 @@
-import {ACTION_START_LOADING, ACTION_STOP_LOADING} from "../constants";
+import {
+    ACTION_LOGIN_FAILURE,
+    ACTION_LOGIN_SUCCESS,
+    ACTION_REGISTER_FAILURE,
+    ACTION_REGISTER_SUCCESS
+} from "../constants";
 
-export function startLoading() {
+export function loginSuccess() {
     return {
-        type: ACTION_START_LOADING
+        type: ACTION_LOGIN_SUCCESS,
     }
 }
-export function stopLoading() {
+
+export function loginFailure(error) {
     return {
-        type: ACTION_STOP_LOADING
+        type: ACTION_LOGIN_FAILURE,
+        payload: error
+    }
+}
+
+export function registerSuccess() {
+    return {
+        type: ACTION_REGISTER_SUCCESS,
+    }
+}
+
+export function registerFailure(error) {
+    return {
+        type: ACTION_REGISTER_FAILURE,
+        payload: error
     }
 }

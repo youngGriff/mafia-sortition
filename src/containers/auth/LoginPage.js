@@ -31,7 +31,7 @@ class LoginPage extends Component {
     render() {
         const {auth} = this.props;
         if (auth.uid)
-            return <Redirect to={MANUAL}/>
+            return <Redirect to={MANUAL}/>;
         return (
             <Container>
                 <h2 className='py-3'>Login</h2>
@@ -41,6 +41,7 @@ class LoginPage extends Component {
                         <Label>Email</Label>
                         <AvField
                             autoFocus
+
                             type="email"
                             required
                             name="email"
@@ -55,6 +56,9 @@ class LoginPage extends Component {
                             name="password"
                             onChange={this.handleChange}
                             type="password"
+                            validate={{
+                                minLength: {value: 6, errorMessage: 'Your password must have at least 6 characters'},
+                            }}
                         />
                     </FormGroup>
                     <div className='d-flex '>
@@ -68,6 +72,7 @@ class LoginPage extends Component {
                             Login
                         </Button>
                     </div>
+                    <p className='text-danger text-center mt-3'>{this.props.loginError}</p>
                 </AvForm>
             </Container>
         );
@@ -77,14 +82,14 @@ class LoginPage extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        login: (creds) => signIn(creds)
+        login: (creds) => dispatch(signIn(creds))
     }
 }
 
 function mapStateToProps(state) {
     return {
-        auth: state.firebase.auth
-
+        auth: state.firebase.auth,
+        loginError: state.auth.loginError
     }
 }
 

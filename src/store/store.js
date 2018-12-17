@@ -6,12 +6,14 @@ import {firebaseReducer, getFirebase, reactReduxFirebase} from "react-redux-fire
 import thunk from 'redux-thunk';
 import {firestoreReducer, getFirestore, reduxFirestore} from 'redux-firestore'
 import fbConfig from '../firebase/firebaseConfig'
+import {authReducer} from "./reducers/authReducer";
 
 const rootReducer = combineReducers({
     players: playerReducer,
     roles: rolesReducer,
     firestore: firestoreReducer,
-    firebase: firebaseReducer
+    firebase: firebaseReducer,
+    auth: authReducer
 });
 const store = createStore(rootReducer,
     composeWithDevTools(
